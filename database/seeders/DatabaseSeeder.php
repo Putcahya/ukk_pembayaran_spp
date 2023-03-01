@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'password' =>  Hash::make('cahyaadmin'),
             'level' => 'admin',
             'id_kelas'=>null,
-            'alamat'=>'xample alamat bantul yogyakarta',
+            'alamat'=>'Bantul Yogyakarta',
             'telepon'=>'08884184536',
         ]);
         \App\Models\User::factory()->create([
@@ -32,40 +32,60 @@ class DatabaseSeeder extends Seeder
             'password' =>  Hash::make('petugasputra'),
             'level' => 'petugas',
             'id_kelas'=>null,
-            'alamat'=>'xample alamat bantul yogyakarta',
+            'alamat'=>'Bantul Yogyakarta',
             'telepon'=>'08884165748',
         ]);
-        // \App\Models\Spp::factory()->create([
-        //     'tahun' => '2020',
-        //     'nominal' => '1500000',
-        // ]);
-        // \App\Models\Kelas::factory()->create([
-        //     'nama_kelas' => '10',
-        //     'jurusan' => 'RPL 2',
-        // ]);
-        // \App\Models\User::factory()->create([
-        //     'name'=>'siswa satu',    
-        //     'email' => 'siswasatu@gmail.com',
-        //     'nisn' => '12345678',
-        //     'nis' => '15529',
-        //     'id_kelas'=>1,
-        //     'id_spp'=>1,
-        //     'password' =>  Hash::make('12345678'),
-        //     'level' => 'siswa',
-        //     'alamat'=>'Bantul yogyakarta',
-        //     'telepon'=>'08884184537',
-        // ]);
-        // \App\Models\User::factory()->create([
-        //     'name'=>'siswa dua',
-        //     'email' => 'siswadua@gmail.com',
-        //     'nisn' => '12345679',
-        //     'nis' => '15529',
-        //     'id_kelas'=>1,
-        //     'id_spp'=>1,
-        //     'password' =>  Hash::make('12345679'),
-        //     'level' => 'siswa',
-        //     'alamat'=>'Bantul yogyakarta',
-        //     'telepon'=>'08884184538',
-        // ]);
+        \App\Models\Kelas::create([
+            'nama_kelas' => '10',
+            'jurusan' => 'RPL 1',
+        ]);
+        \App\Models\Kelas::create([
+            'nama_kelas' => '10',
+            'jurusan' => 'RPL 2',
+        ]);
+        \App\Models\Kelas::create([
+            'nama_kelas' => '10',
+            'jurusan' => 'MM 1',
+        ]);
+        \App\Models\Kelas::create([
+            'nama_kelas' => '10',
+            'jurusan' => 'MM 2',
+        ]);
+        \App\Models\Spp::create([
+            'tahun' => '2020',
+            'nominal' => '1200000',
+        ]);
+        \App\Models\Spp::create([
+            'tahun' => '2021',
+            'nominal' => '1400000',
+        ]);
+        \App\Models\Spp::create([
+            'tahun' => '2022',
+            'nominal' => '1600000',
+        ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Siswa Satu',
+            'nisn'=>'31982310',
+            'nis'=>'12301',
+            'id_kelas'=>1,
+            'id_spp'=>1,
+            'email' => 'siswasatu@gmail.com',
+            'password' =>  Hash::make('12301'),
+            'level' => 'siswa',
+            'alamat'=>'Bantul Yogyakarta',
+            'telepon'=>'08884165749',
+        ]);
+        \App\Models\User::factory()->create([
+            'name' => 'Siswa Dua',
+            'nisn'=>'33781928',
+            'nis'=>'12302',
+            'id_kelas'=>1,
+            'id_spp'=>2,
+            'email' => 'siswadua@gmail.com',
+            'password' =>  Hash::make('12302'),
+            'level' => 'siswa',
+            'alamat'=>'Bantul Yogyakarta',
+            'telepon'=>'08884165750',
+        ]);
     }
 }
