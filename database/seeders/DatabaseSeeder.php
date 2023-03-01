@@ -74,7 +74,8 @@ class DatabaseSeeder extends Seeder
             'level' => 'siswa',
             'alamat'=>'Bantul Yogyakarta',
             'telepon'=>'08884165749',
-        ]);
+        ]); 
+        
         \App\Models\User::factory()->create([
             'name' => 'Siswa Dua',
             'nisn'=>'33781928',
